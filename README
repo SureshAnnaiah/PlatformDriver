@@ -1,12 +1,10 @@
 why do we need platform driver?
-  In a embedded world ,there are plenty of devices that are inherently not discoverbale 
-  by CPU (not connected through a bus that supports enumeration).So we can make use of platform driver and platform device infrastructure provided by kernel to overcome
+  In a embedded world ,there are plenty of devices that are inherently not discoverbale by CPU (not connected through a bus that supports enumeration).So we can make use of platform driver and platform device infrastructure provided by kernel to overcome
   those situations.
 
 what is platform device and how it is different from other devices?
   platform devices are inherently not discoverable (directly connected to CPU). So we can use platform device infrastructure to tell the kernel about their existence and to find associated driver.  
 
-DataStructure:
 struct platform_device
 {
   const char	*name;
@@ -18,14 +16,12 @@ struct platform_device
 	...
 };
 
-  int platform_device_register(struct platform_device *pdev);    // to register a platform device
+int platform_device_register(struct platform_device *pdev);    // to register a platform device
 
 
 what is platform driver and how it is different from other drivers?
-   you can bound a driver with platform device by registering it with kernel using    
-   int platform_driver_register(struct platform_driver *driver); function
+   you can bound a driver with platform device by registering it with kernel using int platform_driver_register(struct platform_driver *driver); function
    
-   DataStructure:
   struct platform_driver {
 	  int (*probe)(struct platform_device *);
 	  int (*remove)(struct platform_device *);
