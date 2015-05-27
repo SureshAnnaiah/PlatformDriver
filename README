@@ -15,7 +15,7 @@ struct platform_device
 	...
 };
 
-int platform_device_register(struct platform_device *pdev);    // to register a platform device
+int platform_device_register(struct platform_device *pdev);   // to register a platform device
 
 
 what is platform driver and how it is different from other drivers?
