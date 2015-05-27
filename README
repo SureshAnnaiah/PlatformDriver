@@ -1,6 +1,5 @@
 why do we need platform driver?
-  In a embedded world ,there are plenty of devices that are inherently not discoverbale by CPU (not connected through a bus that supports enumeration).So we can make use of platform driver and platform device infrastructure provided by kernel to overcome
-  those situations.
+  In a embedded world ,there are plenty of devices that are inherently not discoverbale by CPU (not connected through a bus that supports enumeration).So we can make use of platform driver and platform device infrastructure provided by kernel to overcome those situations.
 
 what is platform device and how it is different from other devices?
   platform devices are inherently not discoverable (directly connected to CPU). So we can use platform device infrastructure to tell the kernel about their existence and to find associated driver.  
