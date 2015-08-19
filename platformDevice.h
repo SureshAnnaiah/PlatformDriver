@@ -1,2 +1,0 @@
-#ifndef __PLATFORMDEVICE_H
-#define __PLATFORMDEVICE_H
