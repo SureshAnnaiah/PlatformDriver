@@ -19,7 +19,7 @@ modules_install:
 
     # called from kernel build system: just declare what our modules are
  obj-m := platform_device.o 
- obj-m  +=platform_driver.o
+ obj-m += platform_driver.o
 
 clean:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
